@@ -3,7 +3,7 @@ body{
     margin-top: 100px;
     align-items: center;
     justify-content: center;
-    padding-top: 250px;
+   
     padding-left: 500px;
 }
 .seat{
@@ -14,9 +14,8 @@ body{
     border-radius: 5px;
 }
 
-.row{
-    display: flex;
-    
+.seat:not(.reserved):hover{
+    transform: scale(1.5);
 }
 
 .seat:nth-of-type(3){
@@ -29,4 +28,46 @@ body{
 
 .seat:nth-of-type(9){
     margin-right: 30px;
+}
+
+.seat.selected{
+    background-color: yellow;
+}
+.seat.reserved{
+    background-color: rgb(7, 194, 181);
+}
+
+.screen{
+    background-color: white;
+    height: 100px;
+    width: 400px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.container.row{
+    padding-left: -500px;
+    padding-top: 50px;
+}
+
+select,option{
+    background-color: rgb(180, 180, 180);
+}
+
+.information{
+    background-color: rgb(0, 0, 0,0.5);
+    padding: 5px 10px;
+    color: #888;
+    display: flex;
+    width: 300px;
+}
+
+.information li{
+    display: flex;
+}
+
+
+.totalInfo{
+    font-weight: bolder;
+    color: white;
 }
